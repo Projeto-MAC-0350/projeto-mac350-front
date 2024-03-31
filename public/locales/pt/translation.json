@@ -1,0 +1,9 @@
+{
+    "project-name": "spotify graph",
+    "project-description": {
+        "title": "O que é esse projeto?",
+        "what-is-it": "Usando essa ferramenta você pode ver com quem seu artista favorito fez colaborações.",
+        "authors": "autores: Filipe Tressmann and Lais Nuto",
+        "course-reference": "Esse é um projeto criado para a disciplina <link1>Desenvolvimento de software - MAC0350</link1> do IME-USP."
+    }
+}

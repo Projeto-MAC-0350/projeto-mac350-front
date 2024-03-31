@@ -1,0 +1,9 @@
+{
+    "project-name": "spotify graph",
+    "project-description": {
+        "title": "What is this project?",
+        "what-is-it": "Using this tool you can view the colaborations your favorite artist has done on spotify.",
+        "authors": "Authors: Filipe Tressmann and Lais Nuto.",
+        "course-reference": "This is a project done for the course <link1>MAC0350</link1> in IME-USP."
+    }
+}

@@ -1,0 +1,9 @@
+.FooterInformation {
+    position: fixed;
+    background-color: rgb(114, 180, 137);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px;
+    text-align: center;
+}
