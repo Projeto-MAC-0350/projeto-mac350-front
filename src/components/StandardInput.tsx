@@ -17,9 +17,9 @@ const StandardInput: React.FC<StandardInputProps> = ({
   };
 
   return (
-    <div style={{ margin: "20px 0" }}>
+    <div className="max-w-5xl w-full space-y-2">
       {label && (
-        <label style={{ marginBottom: "10px", display: "block" }}>
+        <label className="font-sans text-md font-medium text-white">
           {label}
         </label>
       )}

@@ -18,15 +18,17 @@ const ArtistInput: React.FC<ArtistInputProps> = ({
   const { t } = useTranslation();
 
   return (
-    <div style={{ margin: "20px 0" }}>
-      <p>{t('artist-input.description1')}</p>
+    <div className="mt-20 flex flex-col space-y-8 justify-center items-center w-full">
+      <p className="font-sans text-xl font-medium text-white">
+        {t("artist-input.description1")}
+      </p>
       <StandardInput
-        label={t('artist-input.label1')}
+        label={t("artist-input.label1")}
         setArtist={setArtist1}
         artist={artist1}
       />
       <StandardInput
-        label={t('artist-input.label2')}
+        label={t("artist-input.label2")}
         setArtist={setArtist2}
         artist={artist2}
       />
