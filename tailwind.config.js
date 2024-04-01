@@ -11,7 +11,7 @@ module.exports = {
         sans: ["Montserrat", "sans-serif"],
       },
       colors: {
-        green: "##1db954",
+        green: "#1db954",
         black: "#121212",
         grafite: "#212121",
         white: "#FFFFFF",

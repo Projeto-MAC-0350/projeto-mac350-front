@@ -8,8 +8,8 @@ const FooterInformation = () : JSX.Element => {
     const {t, i18n} = useTranslation();
     console.log(i18n.language);
     return (
-        <footer className='FooterInformation'>
-            <p>
+        <footer className="fixed bg-green bottom-0 left-0 right-0 p-2 text-center">
+            <p className='text-md font-medium text-grafite'>
                 <Trans
                     i18nKey="project-description.course-reference"
                     components={{
@@ -17,7 +17,7 @@ const FooterInformation = () : JSX.Element => {
                     }}
                 />
             </p>
-            <p>
+            <p className='text-sm font-medium text-darkGrey'>
                 {t('project-description.authors')}
             </p>
         </footer>
