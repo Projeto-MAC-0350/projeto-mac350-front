@@ -11,7 +11,7 @@ function App() {
   const [artist2, setArtist2] = useState("");
 
   return (
-    <div className="App bg-black h-screen w-full p-10">
+    <div className="App bg-black h-screen w-full p-4">
       <ProjectDescription />
       <ArtistInput
         artist1={artist1}

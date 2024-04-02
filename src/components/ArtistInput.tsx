@@ -20,7 +20,7 @@ const ArtistInput: React.FC<ArtistInputProps> = ({
   return (
     <div className="mt-20 flex flex-col space-y-8 justify-center items-center w-full">
       <p className="font-sans text-xl font-medium text-white">
-        {t("artist-input.description1")}
+        {t("artist-input.description")}
       </p>
       <StandardInput
         label={t("artist-input.label1")}

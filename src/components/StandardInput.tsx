@@ -17,9 +17,9 @@ const StandardInput: React.FC<StandardInputProps> = ({
   };
 
   return (
-    <div className="max-w-5xl w-full space-y-2">
+    <div className="max-w-5xl w-full space-y-2 flex flex-col">
       {label && (
-        <label className="font-sans text-md font-medium text-white">
+        <label className="font-sans text-md font-medium text-white w-full items-start text-left justify-start">
           {label}
         </label>
       )}
@@ -27,13 +27,7 @@ const StandardInput: React.FC<StandardInputProps> = ({
         type="text"
         value={artist}
         onChange={handleChange}
-        style={{
-          padding: "10px",
-          border: "2px solid #ccc",
-          borderRadius: "4px",
-          width: "calc(100% - 24px)",
-          boxSizing: "border-box",
-        }}
+        className="p-2 border-2 border-gray-300 rounded-md w-full"
       />
     </div>
   );
