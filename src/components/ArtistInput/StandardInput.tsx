@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-
+import { useDispatch } from "react-redux";
+import { Action } from "redux";
 type StandardInputProps = {
   label: string;
-  setArtist: (artist: string) => void;
-  artist: string;
+  setArtist: (artist: string) => Action;
 };
 
 const StandardInput: React.FC<StandardInputProps> = ({
   label,
-  artist,
   setArtist,
 }) => {
+  const dispatch = useDispatch();
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newArtist = e.target.value;
-    setArtist(newArtist);
+    dispatch(setArtist(newArtist));
   };
 
   return (
@@ -25,7 +25,6 @@ const StandardInput: React.FC<StandardInputProps> = ({
       )}
       <input
         type="text"
-        value={artist}
         onChange={handleChange}
         className="p-2 border-2 border-gray-300 rounded-md w-full"
       />
