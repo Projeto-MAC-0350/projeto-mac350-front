@@ -6,7 +6,6 @@ import "./FooterInformation.css";
 
 const FooterInformation = (): JSX.Element => {
   const { t, i18n } = useTranslation();
-  console.log(i18n.language);
   return (
     <footer className="fixed bg-green bottom-0 left-0 right-0 p-2 text-center">
       <p className="text-md font-medium text-grafite">
@@ -17,7 +16,7 @@ const FooterInformation = (): JSX.Element => {
           }}
         />
       </p>
-      <p className="text-sm font-medium text-darkGrey">
+      <p className="text-sm font-medium text-darkGray">
         {t("project-description.authors")}
       </p>
     </footer>
