@@ -35,7 +35,7 @@ const PlayButton = () => {
             <polygon points="8,5 20,12 8,19" fill="white" />
           </svg>
         </div>
-        <p className="font-sans text-xl font-bold text-white">
+        <p className="font-sans text-xl font-bold text-black">
           {t("play-button")}
         </p>
       </button>
