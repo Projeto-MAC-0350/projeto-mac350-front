@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import StandardInput from "./StandardInput";
+import StandardInput from "../commons/StandardInput";
 import { setArtist1, setArtist2 } from "../../redux/artistSlice";
 
 const ArtistInput = () : JSX.Element => {
