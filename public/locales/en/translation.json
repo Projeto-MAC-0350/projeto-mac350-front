@@ -11,5 +11,6 @@
     "label1": "Write the name of the first artist",
     "label2": "Write the name of the second artist"
   },
-  "play-button": "Search"
+  "play-button": "Search",
+  "loading": "Loading..."
 }

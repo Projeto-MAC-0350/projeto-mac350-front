@@ -6,6 +6,7 @@ const apiAxios = axios.create({
     timeout: 1000
   });
 
-export const sendArtistInput = async (artist1: string, artist2: string) => {
-    return await apiAxios.get('graph', {params: {artist1: artist1, artist2: artist2}});
+  export const sendArtistInput = async (artist1: string, artist2: string) => {
+    console.log("Sending artist input to backend: ", artist1, artist2)
+    return await apiAxios.get('/path', { params: { artist1: artist1, artist2: artist2 } });
 };
