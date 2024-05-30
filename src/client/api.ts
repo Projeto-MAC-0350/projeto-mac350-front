@@ -3,7 +3,7 @@ import { BACKEND_URL } from "../globals";
 
 const apiAxios = axios.create({
     baseURL: BACKEND_URL,
-    timeout: 1000
+    timeout: 100000
   });
 
   axios.interceptors.request.use(x => {

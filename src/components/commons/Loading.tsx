@@ -4,6 +4,7 @@ function Loading() {
   const { t } = useTranslation();
 
   return (
+    <div className="p-8 bg-black mb-20 flex flex-col items-center justify-center  w-full overflow-hidden" >
     <div role="status" className="flex flex-col items-center p-6">
       <svg
         aria-hidden="true"
@@ -23,6 +24,7 @@ function Loading() {
       </svg>
 
       <p className="text-white animate-pulse">{t("loading")}</p>
+    </div>
     </div>
   );
 }

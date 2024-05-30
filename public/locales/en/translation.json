@@ -12,5 +12,6 @@
     "label2": "Write the name of the second artist"
   },
   "play-button": "Search",
+  "back": "Back",
   "loading": "Loading..."
 }

@@ -14,10 +14,19 @@ async function handleClick(
 ) {
   setLoading(true);
   try {
+    setArtists([])
     const response = await sendArtistInput(artist1, artist2);
-    console.log("Response:", response);
 
-  
+    const artists: Artist[] = response.data.artists.map((artist: any) => ({
+      id: artist.artist.id,
+      name: artist.artist.name,
+      images: artist.artist.images,
+      popularity: artist.artist.popularity
+    }));
+    
+    setArtists(artists);
+
+
   } catch (error) {
     console.error("Error: ", error);
   }
@@ -26,19 +35,21 @@ async function handleClick(
 
 type PlayButtonProps = {
   setArtists: (artists: Artist[]) => void;
+  loading: boolean;
+  setLoading: (loading: boolean) => void; 
 };
 
 
-const PlayButton = ({ setArtists }: PlayButtonProps) => {
+const PlayButton = ({ setArtists, loading, setLoading}: PlayButtonProps) => {
   const { t } = useTranslation();
   const artist1 = useSelector((state: RootState) => state.artists.artist1);
   const artist2 = useSelector((state: RootState) => state.artists.artist2);
-  const [loading, setLoading] = useState(false);
+
 
   return (
     <div className="flex flex-col mt-16 items-center justify-center">
       {loading ? (
-        <Loading />
+        <Loading/>
       ) : (
         <button
           onClick={() => handleClick(artist1, artist2, setLoading, setArtists)}
