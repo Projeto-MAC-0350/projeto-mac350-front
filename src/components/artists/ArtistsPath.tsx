@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Graph from "react-graph-vis";
 
-type Artist = {
+export type Artist = {
     id: number;
     name: string;
+    image: string;
+    popularity: number;
 };
 
 type ArtistPathProps = {

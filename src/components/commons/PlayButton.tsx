@@ -4,23 +4,32 @@ import { useSelector } from "react-redux";
 import { sendArtistInput } from "../../client/api";
 import { RootState } from "../../redux/store";
 import Loading from "./Loading"; 
+import { Artist } from "../artists/ArtistsPath";
 
 async function handleClick(
   artist1: string,
   artist2: string,
-  setLoading: (loading: boolean) => void
+  setLoading: (loading: boolean) => void,
+  setArtists: (artists: Artist[]) => void,
 ) {
   setLoading(true);
   try {
     const response = await sendArtistInput(artist1, artist2);
     console.log("Response:", response);
+
+  
   } catch (error) {
     console.error("Error: ", error);
   }
   setLoading(false);
 }
 
-const PlayButton = () => {
+type PlayButtonProps = {
+  setArtists: (artists: Artist[]) => void;
+};
+
+
+const PlayButton = ({ setArtists }: PlayButtonProps) => {
   const { t } = useTranslation();
   const artist1 = useSelector((state: RootState) => state.artists.artist1);
   const artist2 = useSelector((state: RootState) => state.artists.artist2);
@@ -32,7 +41,7 @@ const PlayButton = () => {
         <Loading />
       ) : (
         <button
-          onClick={() => handleClick(artist1, artist2, setLoading)}
+          onClick={() => handleClick(artist1, artist2, setLoading, setArtists)}
           className="bg-green flex flex-row space-x-2 items-center justify-center rounded-full py-2 pl-2 pr-4 hover:bg-opacity-70 transition-colors duration-100"
         >
           <div className="bg-black h-full rounded-full p-2">
