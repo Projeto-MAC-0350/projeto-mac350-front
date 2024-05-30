@@ -25,7 +25,7 @@ const PlayButton = () => {
   const artist1 = useSelector((state: RootState) => state.artists.artist1);
   const artist2 = useSelector((state: RootState) => state.artists.artist2);
   const [loading, setLoading] = useState(false);
-  console.log(loading);
+
   return (
     <div className="flex flex-col mt-16 items-center justify-center">
       {loading ? (
