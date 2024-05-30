@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { sendArtistInput } from "../../client/api";
 import { RootState } from "../../redux/store";
-import Loading from "./Loading"; // Importe o componente Loading
+import Loading from "./Loading"; 
 
 async function handleClick(
   artist1: string,
