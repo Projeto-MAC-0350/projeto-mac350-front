@@ -13,5 +13,7 @@
   },
   "play-button": "Search",
   "back": "Back",
-  "loading": "Loading..."
+  "loading": "Loading...",
+  "noResults": "No results found",
+  "tryAgain": "Try again"
 }

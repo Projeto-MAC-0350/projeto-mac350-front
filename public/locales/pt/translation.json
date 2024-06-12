@@ -13,5 +13,7 @@
   },
   "play-button": "Pesquisar",
   "back": "Voltar",
-  "loading": "Carregando..."
+  "loading": "Carregando...",
+  "noResults": "Opa! Não encontramos colaborações entre esses artistas no momento, tente novamente mais tarde.",
+  "tryAgain": "Tente novamente"
 }
