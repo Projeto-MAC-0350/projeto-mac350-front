@@ -69,7 +69,7 @@ const ArtistPath = ({ path, setArtists }: ArtistPathProps) => {
         id: hashCode(artist.id),
         label: artist.name,
         title: artist.name,
-        x: index % 2 === 0 ? -containerDimensions.width/4 +120: containerDimensions.width/4 - 120,
+        x: index % 2 === 0 ? -containerDimensions.width/4 +150: containerDimensions.width/4 - 150,
         y: (-containerDimensions.height/4 + 50) + index * 50,
         size: 20,
       }));
