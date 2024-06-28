@@ -46,10 +46,10 @@ function hashCode(str: string) {
 
 const ArtistPath = ({ path, setArtists }: ArtistPathProps) => {
   const { t } = useTranslation();
-  const graphContainerRef = useRef(null); // Ref para o contêiner do grafo
+  const graphContainerRef = useRef(null); 
   const [graph, setGraph] = useState<GraphData>({ nodes: [], edges: [] });
-  const [containerDimensions, setContainerDimensions] = useState({ width: 800, height: 400 }); // Dimensões padrão
-
+  const [containerDimensions, setContainerDimensions] = useState({ width: 800, height: 400 }); 
+  console.log(path);
   useEffect(() => {
     const updateSize = () => {
       if (graphContainerRef.current) {
@@ -58,7 +58,7 @@ const ArtistPath = ({ path, setArtists }: ArtistPathProps) => {
       }
     };
 
-    updateSize(); // Atualizar na montagem
+    updateSize();
     window.addEventListener("resize", updateSize);
     return () => window.removeEventListener("resize", updateSize);
   }, []);
