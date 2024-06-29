@@ -7,15 +7,14 @@ module.exports = {
     "@/(.*)$": "<rootDir>/src/$1",
   },
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest', // Transform TypeScript files
-    '^.+\\.(js|jsx)$': 'babel-jest' // Transform JavaScript files
-  },
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(js|jsx)$': 'babel-jest'
+  },  
   transformIgnorePatterns: [
     'node_modules/*' // Replace "module-name" with actual module names
   ],
   // to obtain access to the matchers.
   setupFilesAfterEnv: ["./setupTests.ts"],
-
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   modulePaths: ["<rootDir>"],
   testEnvironment: "jsdom",
