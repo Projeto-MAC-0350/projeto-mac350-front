@@ -12,7 +12,7 @@ jest.mock("react-i18next", () => ({
 
 describe("ArtistPath", () => {
   it("renders without crashing", () => {
-    const path = [{ id: "1", name: "Artist 1", images: [], popularity: 10 }];
+    const path = [{ id: "1", name: "Artist 1", images: [], popularity: 10 }, { id: "2", name: "Artist 2", images: [], popularity: 10 }];
     render(<ArtistPath path={path} setArtists={jest.fn()} />);
     expect(screen.getByText("Artist 1")).toBeInTheDocument();
   });

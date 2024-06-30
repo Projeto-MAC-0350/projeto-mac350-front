@@ -1,16 +1,13 @@
 import { useTranslation } from "react-i18next";
-import { Artist } from "./artists/ArtistsPath";
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import React from "react";
 
 type NoResultsProps = {
   setNoResults: (noResults: boolean) => void;
 };
 
 function NoResults({ setNoResults }: NoResultsProps) {
-
   const { t } = useTranslation();
-  
+
   return (
     <div className="p-8 bg-black py-20 flex flex-col space-y-20 items-center justify-center  w-full overflow-hidden">
       <p className="font-sans text-xl font-medium text-white">
