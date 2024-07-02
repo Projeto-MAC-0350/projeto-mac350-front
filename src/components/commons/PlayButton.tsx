@@ -32,10 +32,10 @@ async function handleClick(
     }
 
     const artists: Artist[] = response.data.artists.map((artist: any) => ({
-      id: artist.artist.id,
-      name: artist.artist.name,
-      images: artist.artist.images,
-      popularity: artist.artist.popularity
+      id: artist.artist?.id,
+      name: artist.artist?.name,
+      images: artist.artist?.images,
+      popularity: artist.artist?.popularity
     }));
     
     setArtists(artists);
